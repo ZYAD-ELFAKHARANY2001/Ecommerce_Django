@@ -38,11 +38,11 @@ class Customer(models.Model):
     birth_date = models.DateField(null=True)
     membership = models.CharField(max_length=1, choices=MEMBERSHIP_CHOICES, default=MemberShip_Bronze)
 
-    class Meta:
-        db_table = 'store_customer'
-        indexes = [
-            models.Index(fields=['last_name', 'first_name']),
-        ]
+    # class Meta:
+    #     db_table = 'store_customer'
+    #     indexes = [
+    #         models.Index(fields=['last_name', 'first_name']),
+    #     ]
 
 class Order(models.Model):
     Payment_Status_Pending ='P'
